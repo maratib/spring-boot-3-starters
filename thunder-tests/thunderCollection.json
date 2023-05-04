@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "bdb7c19a-8a06-4639-8e53-f5cce7ab9661",
+    "colName": "API",
+    "created": "2023-05-04T14:32:43.630Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "ae79197a-6b28-462b-ba6e-9e01976a1af3",
+    "colName": "Base",
+    "created": "2023-05-04T14:48:26.504Z",
+    "sortNum": 5000,
+    "folders": []
+  }
+]

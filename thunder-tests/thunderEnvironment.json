@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "e2dd4949-de38-4c76-823d-5c8381e4115b",
+    "name": "Env",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-05-04T14:31:41.299Z",
+    "modified": "2023-05-04T14:31:41.299Z",
+    "data": [
+      {
+        "name": "HOST",
+        "value": "http://localhost:8181"
+      },
+      {
+        "name": "API",
+        "value": "{{HOST}}/api/v1"
+      },
+      {
+        "name": "ADMIN",
+        "value": "{{HOST}}/admin/v1"
+      },
+      {
+        "name": "TOKEN",
+        "value": "abc"
+      }
+    ]
+  }
+]
