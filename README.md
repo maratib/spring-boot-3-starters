@@ -26,5 +26,6 @@ git checkout -b [branch-name]
 # Merge to main - first checkout main
 git checkout main
 git merge [1-start]
+```
 
 
