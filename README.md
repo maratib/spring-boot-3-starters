@@ -11,7 +11,8 @@ JUnit : 5
 - Validation
 - Exception Handling
 - Testing
-- DevTools (auto reload) 
+- DevTools (auto reload)
+- Authentication 
 
 
 ## Git
