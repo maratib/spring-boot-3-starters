@@ -13,3 +13,18 @@ JUnit : 5
 - Testing
 - DevTools (auto reload) 
 
+
+## Git
+```bash 
+# List all branches
+git branch -a
+
+# Create a branch
+git checkout -b [branch-name]
+
+
+# Merge to main - first checkout main
+git checkout main
+git merge [1-start]
+
+
