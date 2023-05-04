@@ -1,0 +1,25 @@
+# Command to all profiles
+app:
+  version: "0.1"
+spring:
+  main:
+    banner-mode: "off"
+  web:
+    resources:
+      add-mappings: "false"
+  mvc:
+    throw-exception-if-no-handler-found: "true"
+
+logging:
+  # config: ./config/logback.xml
+  pattern:
+    file: "%d{dd-MM HH:mm} - %-5level - %logger{1} - %msg%n"
+  file:
+    name: logs/app.log
+  level:
+    root: WARN
+    org:
+      hibernate: error
+      springframework: WARN
+    com:
+      mak: INFO
