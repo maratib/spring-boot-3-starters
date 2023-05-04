@@ -9,7 +9,7 @@
 		<version>3.0.6</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.jp</groupId>
+	<groupId>com.mak</groupId>
 	<artifactId>starter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>starter</name>

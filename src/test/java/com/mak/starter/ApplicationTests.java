@@ -1,4 +1,4 @@
-package com.jp.starter;
+package com.mak.starter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

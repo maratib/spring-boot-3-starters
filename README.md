@@ -1,5 +1,5 @@
 # Spring Boot 3 Starter
- Version : 3.0.5  
+Version : 3.0.6  
 Java : 17  
 JUnit : 5  
 
