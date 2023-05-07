@@ -8,9 +8,13 @@
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-05-04T14:32:56.414Z",
-    "modified": "2023-05-04T14:49:44.985Z",
+    "modified": "2023-05-07T20:14:39.641Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
     "tests": []
   },
   {
@@ -102,5 +106,90 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "b362f45c-a528-4d5c-9912-09d9fdd84d51",
+    "colId": "03177447-f7ee-4e9e-92de-f43972dc18a1",
+    "containerId": "",
+    "name": "authenticate",
+    "url": "{{AUTH}}/authenticate",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-05-05T20:54:08.867Z",
+    "modified": "2023-05-07T19:11:43.894Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"admin@gmail.com\",\n  \"password\": \"admin\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "66f6de65-e9ed-4c29-8849-8f57a6cd62b4",
+    "colId": "03177447-f7ee-4e9e-92de-f43972dc18a1",
+    "containerId": "",
+    "name": "logout",
+    "url": "{{AUTH}}/logout",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-05-07T19:12:05.803Z",
+    "modified": "2023-05-07T19:13:37.892Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "f87eaf9c-7772-49b1-8242-71747e735129",
+    "colId": "03177447-f7ee-4e9e-92de-f43972dc18a1",
+    "containerId": "",
+    "name": "refresh",
+    "url": "{{AUTH}}/refresh-token",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-05-07T19:40:45.127Z",
+    "modified": "2023-05-07T19:44:02.560Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "dcfc1acb-3339-4724-8246-4e27c4c36a6e",
+    "colId": "cb33fc97-0fff-4ac6-b21a-23ab32bda6cb",
+    "containerId": "",
+    "name": "Admin - Home",
+    "url": "{{ADMIN}}",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-05-07T20:00:32.757Z",
+    "modified": "2023-05-07T20:06:00.441Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "36173977-d011-4975-bdd5-ac92225fa325",
+    "colId": "cb33fc97-0fff-4ac6-b21a-23ab32bda6cb",
+    "containerId": "",
+    "name": "Admin - User",
+    "url": "",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-05-07T20:00:52.315Z",
+    "modified": "2023-05-07T20:00:52.315Z",
+    "headers": []
   }
 ]

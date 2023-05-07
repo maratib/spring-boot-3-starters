@@ -1,2 +1,14 @@
 server:
   port: "8181"
+
+spring:
+  datasource:
+    username: "temp"
+    password: "temp"
+    url: "jdbc:mysql://localhost:3306/spring"
+    # Driver: "com.mysql.cj.jdbc.Driver"
+  jpa:
+    open-in-view: "false"
+    hibernate:
+      ddl-auto: update
+      # ddl-auto: create

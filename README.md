@@ -12,7 +12,7 @@ JUnit : 5
 - Exception Handling
 - Testing
 - DevTools (auto reload)
-- Authentication 
+- Authentication (JWT Token, Refresh Token, Logout) 
 
 
 ## Git

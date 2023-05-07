@@ -21,7 +21,11 @@
       },
       {
         "name": "TOKEN",
-        "value": "abc"
+        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2ODM0OTA3ODcsImV4cCI6MTY4MzU3NzE4N30.kqYOiBy7il06-tR5Htx0WvCfkHK9CKsEVLRbqKCyxj8"
+      },
+      {
+        "name": "AUTH",
+        "value": "{{HOST}}/auth"
       }
     ]
   }

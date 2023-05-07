@@ -1,4 +1,4 @@
-package com.mak.dto.auth;
+package com.mak.auth.dto;
 
 import org.hibernate.validator.constraints.Length;
 import jakarta.validation.constraints.*;

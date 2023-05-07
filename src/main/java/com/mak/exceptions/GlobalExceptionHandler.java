@@ -30,6 +30,30 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     }
 
+    // @ExceptionHandler({ AuthenticationException.class })
+    // public ResponseEntity<Object> handleAuthenticationException(Exception ex) {
+    // return new ResponseEntity<>(getErrorMessage(ex, "Authentication failed",
+    // null), HttpStatus.UNAUTHORIZED);
+    // }
+
+    // @ExceptionHandler({ AccessDeniedException.class })
+    // public ResponseEntity<Object> accessDeniedException(Exception ex) {
+    // return new ResponseEntity<>(getErrorMessage(ex, "Access Denied", null),
+    // HttpStatus.UNAUTHORIZED);
+    // }
+
+    // @ExceptionHandler({ InsufficientAuthenticationException.class })
+    // public ResponseEntity<Object> insufficientAuthenticationException(Exception
+    // ex) {
+    // return new ResponseEntity<>(getErrorMessage(ex, "Access Denied", null),
+    // HttpStatus.UNAUTHORIZED);
+    // }
+
+    @ExceptionHandler({ DBException.class })
+    public ResponseEntity<Object> handleDBException(Exception ex) {
+        return new ResponseEntity<>(getErrorMessage(ex, "DB Exception", null), HttpStatus.BAD_REQUEST);
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
             HttpHeaders headers, HttpStatusCode status, WebRequest request) {

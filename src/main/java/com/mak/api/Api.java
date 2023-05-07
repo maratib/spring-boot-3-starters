@@ -3,12 +3,13 @@ package com.mak.api;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import com.mak.dto.auth.AuthRequest;
+import com.mak.auth.dto.AuthRequest;
 
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1")
+// @PreAuthorize("hasRole('USER')")
 public class Api {
 
     @Value("${app.version}")
