@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -33,19 +34,23 @@ public class JwtFilter extends OncePerRequestFilter {
     @Autowired
     private TokenRepo tokenRepo;
 
+    @Value("${app.auth-url}")
+    private String appAuthUrl;
+
     @Override
     protected void doFilterInternal(
             @NonNull HttpServletRequest request,
             @NonNull HttpServletResponse response,
             @NonNull FilterChain filterChain) throws ServletException, IOException {
-        // if (request.getServletPath().contains("/api/v1/auth")) {
-        // filterChain.doFilter(request, response);
-        // return;
-        // }
+
+        if (request.getServletPath().contains(appAuthUrl)) {
+            filterChain.doFilter(request, response);
+            return;
+        }
         final String authHeader = request.getHeader("Authorization");
         final String jwt;
         final String userEmail;
-        System.out.println("JWTFilter : " + authHeader);
+
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             filterChain.doFilter(request, response);
             return;

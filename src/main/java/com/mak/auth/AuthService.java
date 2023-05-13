@@ -47,11 +47,15 @@ public class AuthService implements UserDetailsService {
     private AuthenticationManager authenticationManager;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<User> user = userRepo.findByEmail(username);
-        return user.map(UserInfoDetails::new)
-                .orElseThrow(() -> new UsernameNotFoundException("user not found " +
-                        username));
+    public User loadUserByUsername(String username) throws UsernameNotFoundException {
+
+        // Optional<User> user = userRepo.findByEmail(username);
+        // return user.map(UserInfoDetails::new)
+        // .orElseThrow(() -> new UsernameNotFoundException("user not found " +
+        // username));
+
+        return findByEmail(username).orElseThrow(() -> new UsernameNotFoundException("user not found " +
+                username));
 
     }
 
@@ -94,13 +98,12 @@ public class AuthService implements UserDetailsService {
                         request.getPassword()));
         // var userDetails = loadUserByUsername(request.getUsername());
         var user = findByEmail(request.getUsername()).orElseThrow();
-        var userDetails = new UserInfoDetails(user);
-        var jwtToken = jwtService.generateToken(userDetails);
-        var refreshToken = jwtService.generateRefreshToken(userDetails);
+
+        var jwtToken = jwtService.generateToken(user);
+        var refreshToken = jwtService.generateRefreshToken(user);
         revokeAllUserTokens(user);
         saveUserToken(user, jwtToken);
         return AuthResponse.builder()
-                .email(userDetails.getUsername())
                 .accessToken(jwtToken)
                 .refreshToken(refreshToken)
                 .build();
@@ -142,14 +145,12 @@ public class AuthService implements UserDetailsService {
         System.out.println("Going through here logout : " + refreshToken + userEmail);
         if (userEmail != null) {
             var user = findByEmail(userEmail).orElseThrow();
-            var userDetails = new UserInfoDetails(user);
 
-            if (jwtService.isTokenValid(refreshToken, userDetails)) {
-                var accessToken = jwtService.generateToken(userDetails);
+            if (jwtService.isTokenValid(refreshToken, user)) {
+                var accessToken = jwtService.generateToken(user);
                 revokeAllUserTokens(user);
                 saveUserToken(user, accessToken);
                 var authResponse = AuthResponse.builder()
-                        .email(user.getEmail())
                         .accessToken(accessToken)
                         .refreshToken(refreshToken)
                         .build();

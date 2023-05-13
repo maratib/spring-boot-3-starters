@@ -35,11 +35,12 @@ public class Api {
         return String.format("API : First:%s Second:%s ", first, second);
     }
 
-    @PostMapping("/post-validate")
-    public String authenticateAndGetToken(@RequestBody @Valid AuthRequest authRequest) {
-        // System.out.println("Auth : " + authRequest);
+    // @PostMapping("/post-validate")
+    // public String authenticateAndGetToken(@RequestBody @Valid AuthRequest
+    // authRequest) {
+    // // System.out.println("Auth : " + authRequest);
 
-        return "Hello Post : " + authRequest;
-    }
+    // return "Hello Post : " + authRequest;
+    // }
 
 }
