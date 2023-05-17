@@ -5,15 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class MyServiceTest {
+public class UserServiceTest {
 
     @Autowired
-    private MyService myService;
+    private UserService service;
 
     @Test
     public void test1() {
 
-        myService.doTest();
+        service.createUser();
+        // service.findAndUpdate();
+        service.findAndDelete();
+        service.findOne();
 
     }
 
