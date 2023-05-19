@@ -3,8 +3,8 @@ package com.mak.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mak.model.User;
-import com.mak.model.repo.UserRepo;
+import com.mak.model.case1.User;
+import com.mak.model.case1.repo.UserRepo;
 
 @Service
 public class UserService {

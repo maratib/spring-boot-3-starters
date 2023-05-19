@@ -1,4 +1,4 @@
-package com.mak.model;
+package com.mak.model.case1;
 
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;

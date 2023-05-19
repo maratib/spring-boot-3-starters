@@ -1,11 +1,11 @@
-package com.mak.model.repo;
+package com.mak.model.case1.repo;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.mak.model.User;
+import com.mak.model.case1.User;
 
 @Repository
 public interface UserRepo extends JpaRepository<User, String> {

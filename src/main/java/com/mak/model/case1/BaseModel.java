@@ -1,4 +1,4 @@
-package com.mak.model;
+package com.mak.model.case1;
 
 import java.io.Serializable;
 import java.util.Date;
