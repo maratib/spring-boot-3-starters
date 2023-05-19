@@ -30,3 +30,6 @@ git push --set-upstream origin main
 ```
 
 
+## Resources : 
+
+[Convert XML to JAVA, JSON to JAVA etc.](https://json2csharp.com/)
