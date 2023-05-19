@@ -29,3 +29,6 @@ git merge [1-start]
 ```
 
 
+## Resources : 
+
+[Convert XML to JAVA, JSON to JAVA etc.](https://json2csharp.com/)
