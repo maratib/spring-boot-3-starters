@@ -8,12 +8,12 @@ import lombok.*;
 
 @Data
 @Entity
-@Table(name = "profiles")
+@Table(name = "posts")
 @ToString(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-@SQLDelete(sql = "UPDATE users SET del = true WHERE id=?")
+@SQLDelete(sql = "UPDATE posts SET del = true WHERE id=?")
 @Where(clause = "del=false")
 public class Post extends BaseEntity {
 
