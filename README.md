@@ -12,7 +12,7 @@ JUnit : 5
 - Exception Handling
 - Testing
 - DevTools (auto reload) 
-- JPA-Ready (MySql, H2)
+- JPA-Ready (MySql, H2, Security)
 
 
 ## Git
